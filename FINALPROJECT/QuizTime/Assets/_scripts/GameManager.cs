@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float timeBetweenQuestions = 2f;
 
+    [SerializeField]
+    private Animator animator;
+
     void Start()
     {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
 
     public void UserSelectTrue()
     {
+        animator.SetTrigger("True");
+
         if (currentQuestion.isTrue)
         {
             Debug.Log("Correct!");
@@ -82,6 +87,8 @@ public class GameManager : MonoBehaviour
     }
     public void UserSelectFalse()
     {
+        animator.SetTrigger("False");
+
         if (currentQuestion.isTrue)
         {
             Debug.Log("Correct!");
