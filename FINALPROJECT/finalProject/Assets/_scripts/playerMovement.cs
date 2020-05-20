@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour
 {
     public float speed = .1f; //how fast player moves
 
-    private bool FacingRight;
+    private bool FacingRight; //creating the function true or false statement to change the direction the character is facing
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +52,7 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxisRaw ("Horizontal") > 0) //input on the x axis keeping track of which direction my player is going in
+        if (Input.GetAxisRaw ("Horizontal") > 0) //input on the x axis keeping track of which direction my player is going in, 
         {
             if (!FacingRight)
             {

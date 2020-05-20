@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class ReSpawn : MonoBehaviour
 {
-    public Transform Respawn;
-    public AudioSource AS;
+    public Transform Respawn; //when player hits an object respwan at the start of a level 
+    public AudioSource AS; //creating the audio source to play a sound upon death 
         
     void OnTriggerEnter2D(Collider2D col) 
     {
